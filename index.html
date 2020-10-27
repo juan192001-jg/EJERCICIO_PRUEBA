@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id='app'>
+            <form>
+                <!-- <h1 v-text="mensaje2"></h1> -->
+                <h4>Ingrese las horas diarias trabajas por la persona </h4>
+                <br>
+                <div>
+                    <form class="form-inline ">
+                    </form>
+
+                    <form class="form-inline ">
+                        <div class="form-group col-3 ">
+                            <label for="exampleInputEmail1">Ingrese Horas / diarias trabajadas en el mes</label>
+                            <input v-model.number="Horas" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                    </form>
+                    <br>
+                    <button type="button" v-on:click="calcularPago" class="btn btn-success">Calcular</button>
+                    <br>
+                    <br>
+                    <h4>Total a pagar </h4>
+                    <br>
+                    <h5 v-text="msgPago" class="text-mute"></h5>
+                    <br>
+                    <br>
+                    <h4>Impuestos</h4>
+                    <h5 v-text="msgPagoInpuestos" class="text-mute"></h5>
+                </div>
+            </form>
+            <script src="js/sweetalert2.all.min.js"></script>
+            <script src="js/vue.js"></script>
+            <script src="js/main.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>
